@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "Custom-website-Chatbot-using-javascript",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

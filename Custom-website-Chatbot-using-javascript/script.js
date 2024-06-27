@@ -17,7 +17,22 @@ const userMessage = [
       "what is your name",
       "what call yourself"
     ],
-    
+    ["i love you"],
+    ["happy", "good", "fun", "wonderful", "fantastic", "cool", "very good"],
+    ["bad", "bored", "tired"],
+    ["help me", "tell me story", "tell me joke"],
+    ["ah", "ok", "okay", "nice", "welcome"],
+    ["thanks", "thank you"],
+    ["what should i eat today","what i eat today"],
+    ["bro"],
+    ["what", "why", "how", "where", "when"],
+    ["corona", "covid19", "coronavirus"],
+    ["you are funny"],
+    ["i dont know"],
+    ["boring"],
+    ["im tired"],
+    ["what are you"],
+    ["what is your work","your work"],
   ];
   const botReply = [
     ["Hello!", "Hi!", "Hey!", "Hi there!"],
@@ -74,7 +89,15 @@ const synth = window.speechSynthesis;
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
   
- 
+  function voiceControl(string) {
+    let u = new SpeechSynthesisUtterance(string);
+    u.text = string;
+    u.lang = "en-aus";
+    u.volume = 1;
+    u.rate = 1;
+    u.pitch = 1;
+    synth.speak(u);
+  }
   
   function sendMessage() {
     const inputField = document.getElementById("input");
@@ -160,9 +183,10 @@ chatbotToggler.addEventListener("click", () => document.body.classList.toggle("s
     }
     return item;
   }
-  
+  let speak = document.getElementById("speak"); 
+    speak.addEventListener("click", function() { speak.classList.toggle("active"); 
 
-
+  }); 
   function addChat(input, product) {
     const mainDiv = document.getElementById("message-section");
     let userDiv = document.createElement("div");
@@ -178,9 +202,22 @@ chatbotToggler.addEventListener("click", () => document.body.classList.toggle("s
     mainDiv.appendChild(botDiv);
     var scroll = document.getElementById("message-section");
     scroll.scrollTop = scroll.scrollHeight;
-    s
+    speaker();
     
+function speaker(){
+    // add class "active" to element on button press
+   
+  function checkIfActive() 
+    { if (speak.classList.contains("active")){
+      voiceControl(product); } 
+    // do something here if the class exists }
+     else { console.log("Class active has not been added"); }}
+     // do something else here if the class does not exist } }
+     checkIfActive()
 
+    // later, check if class "active" has been added to element 
+   
+  }
 
   
 }
