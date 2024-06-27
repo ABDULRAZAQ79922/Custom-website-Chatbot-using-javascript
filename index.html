@@ -5,23 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&family=Finger+Paint&display=swap">
   </head>
   <body>
 
   <button class="chatbot-toggler">
     <span class="material-symbols-rounded message"><svg xmlns="http://www.w3.org/2000/svg" class="first-svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M80-80v-740q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H240L80-80Zm160-319h313v-60H240v60Zm0-130h480v-60H240v60Zm0-130h480v-60H240v60Z"/></svg></span>
-    
+    <span  class="material-symbols-rounded"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></span>
   </button>
   <div class="card">
     <div id="header">
       <h1>ChatBot </h1>
+      <div class="speaker" id="speak"><img src="Bot-speaker.png"></div>
+      <span class="close-btn material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></span>
     </div>
     <div id="message-section">
         
-      
+      <div class="message" id="bot"> <img src="bot-image.png" alt="" class="bot-img"><span id="bot-response"> Hello.. I'm listening! Go on..</span></div>
     </div>
     <div id="input-section">
         <input  type="text" id="input" placeholder="Type a message" autocomplete="off" autofocus="autofocus"/>
